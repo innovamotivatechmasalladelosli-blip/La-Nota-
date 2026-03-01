@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO authors (name, bio, createdAt) VALUES \n('Uriel', 'Autor y defensor de derechos humanos', NOW()),\n('Alexis', 'Especialista en cívica y educación', NOW()),\n('Edzel', 'Investigador de derechos fundamentales', NOW());",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4A5495C4RRxP89H.root --database TfyWz7UcrDCwE6acTeKzeU --execute INSERT INTO authors (name, bio, createdAt) VALUES \n('Uriel', 'Autor y defensor de derechos humanos', NOW()),\n('Alexis', 'Especialista en cívica y educación', NOW()),\n('Edzel', 'Investigador de derechos fundamentales', NOW());",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 97
+}
