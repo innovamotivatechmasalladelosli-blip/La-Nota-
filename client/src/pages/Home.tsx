@@ -103,6 +103,17 @@ export default function Home() {
           </CardContent>
         </Card>
 
+        {/* Video Section */}
+        <div className="mb-12 aspect-video">
+          <iframe
+            className="w-full h-full rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+
         {/* Derechos Destacados */}
         <div className="mb-12">
           <h3 className="text-3xl font-bold mb-6">Derechos Fundamentales</h3>
@@ -141,6 +152,17 @@ export default function Home() {
                   <p className="text-gray-600">{derecho.description}</p>
                 </CardContent>
               </Card>
+
+        {/* Video Section */}
+        <div className="mb-12 aspect-video">
+          <iframe
+            className="w-full h-full rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
             ))}
           </div>
         </div>
@@ -175,6 +197,17 @@ export default function Home() {
                     </p>
                   </CardContent>
                 </Card>
+
+        {/* Video Section */}
+        <div className="mb-12 aspect-video">
+          <iframe
+            className="w-full h-full rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
               ))}
             </div>
           </div>
@@ -206,6 +239,17 @@ export default function Home() {
               </p>
             </CardContent>
           </Card>
+
+        {/* Video Section */}
+        <div className="mb-12 aspect-video">
+          <iframe
+            className="w-full h-full rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
           <Card>
             <CardHeader>
               <CardTitle className="text-lg">Comunidad</CardTitle>
@@ -216,6 +260,17 @@ export default function Home() {
               </p>
             </CardContent>
           </Card>
+
+        {/* Video Section */}
+        <div className="mb-12 aspect-video">
+          <iframe
+            className="w-full h-full rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
           <Card>
             <CardHeader>
               <CardTitle className="text-lg">Acción</CardTitle>
@@ -226,6 +281,17 @@ export default function Home() {
               </p>
             </CardContent>
           </Card>
+
+        {/* Video Section */}
+        <div className="mb-12 aspect-video">
+          <iframe
+            className="w-full h-full rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
         </div>
       </section>
 
