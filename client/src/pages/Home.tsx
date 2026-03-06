@@ -107,7 +107,7 @@ export default function Home() {
         <div className="mb-12 aspect-video">
           <iframe
             className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -157,7 +157,7 @@ export default function Home() {
         <div className="mb-12 aspect-video">
           <iframe
             className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -202,7 +202,7 @@ export default function Home() {
         <div className="mb-12 aspect-video">
           <iframe
             className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -244,7 +244,7 @@ export default function Home() {
         <div className="mb-12 aspect-video">
           <iframe
             className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -265,7 +265,7 @@ export default function Home() {
         <div className="mb-12 aspect-video">
           <iframe
             className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -286,7 +286,7 @@ export default function Home() {
         <div className="mb-12 aspect-video">
           <iframe
             className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
