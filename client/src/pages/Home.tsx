@@ -3,26 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLocation } from "wouter";
 import { getLoginUrl } from "@/const";
-import { trpc } from "@/lib/trpc";
-import { Streamdown } from "streamdown";
 
 export default function Home() {
   const { user, loading } = useAuth();
   const [, setLocation] = useLocation();
-  const { data: featuredPublications } = trpc.publications.getFeatured.useQuery();
-  const { data: authors } = trpc.authors.getAll.useQuery();
-
-  const getAuthorNames = (authorIds: string) => {
-    try {
-      const ids = JSON.parse(authorIds) as number[];
-      return authors
-        ?.filter((a) => ids.includes(a.id))
-        .map((a) => a.name)
-        .join(", ");
-    } catch {
-      return "Desconocido";
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
@@ -38,9 +22,6 @@ export default function Home() {
                     Panel Admin
                   </Button>
                 )}
-                <Button onClick={() => setLocation("/publications")}>
-                  Ver Publicaciones
-                </Button>
               </>
             ) : (
               <>
@@ -107,7 +88,7 @@ export default function Home() {
         <div className="mb-12 aspect-video">
           <iframe
             className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
+            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=0"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -152,66 +133,9 @@ export default function Home() {
                   <p className="text-gray-600">{derecho.description}</p>
                 </CardContent>
               </Card>
-
-        {/* Video Section */}
-        <div className="mb-12 aspect-video">
-          <iframe
-            className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </div>
             ))}
           </div>
         </div>
-
-        {/* Featured Publications */}
-        {featuredPublications && featuredPublications.length > 0 && (
-          <div className="mb-12">
-            <h3 className="text-3xl font-bold mb-6">Artículos Destacados</h3>
-            <div className="space-y-4">
-              {featuredPublications.map((pub) => (
-                <Card
-                  key={pub.id}
-                  className="hover:shadow-lg transition-shadow cursor-pointer"
-                  onClick={() => setLocation(`/publication/${pub.id}`)}
-                >
-                  <CardHeader>
-                    <div className="flex justify-between items-start">
-                      <div className="flex-1">
-                        <CardTitle>{pub.title}</CardTitle>
-                        <CardDescription>
-                          Por {getAuthorNames(pub.authorIds)} • {new Date(pub.createdAt).toLocaleDateString("es-ES")}
-                        </CardDescription>
-                      </div>
-                      <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded text-xs font-medium whitespace-nowrap ml-4">
-                        ⭐ Destacado
-                      </span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 line-clamp-2">
-                      {pub.excerpt || pub.content.substring(0, 150)}...
-                    </p>
-                  </CardContent>
-                </Card>
-
-        {/* Video Section */}
-        <div className="mb-12 aspect-video">
-          <iframe
-            className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </div>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* Call to Action */}
         <div className="bg-red-900 text-white rounded-lg p-8 text-center mb-12">
@@ -219,12 +143,6 @@ export default function Home() {
           <p className="text-red-100 mb-6">
             Descubre artículos, análisis y reflexiones sobre derechos humanos y cívica.
           </p>
-          <Button
-            onClick={() => setLocation("/publications")}
-            className="bg-white text-red-900 hover:bg-gray-100"
-          >
-            Ver Todas las Publicaciones
-          </Button>
         </div>
 
         {/* Footer Info */}
@@ -240,16 +158,6 @@ export default function Home() {
             </CardContent>
           </Card>
 
-        {/* Video Section */}
-        <div className="mb-12 aspect-video">
-          <iframe
-            className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </div>
           <Card>
             <CardHeader>
               <CardTitle className="text-lg">Comunidad</CardTitle>
@@ -261,16 +169,6 @@ export default function Home() {
             </CardContent>
           </Card>
 
-        {/* Video Section */}
-        <div className="mb-12 aspect-video">
-          <iframe
-            className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </div>
           <Card>
             <CardHeader>
               <CardTitle className="text-lg">Acción</CardTitle>
@@ -281,17 +179,6 @@ export default function Home() {
               </p>
             </CardContent>
           </Card>
-
-        {/* Video Section */}
-        <div className="mb-12 aspect-video">
-          <iframe
-            className="w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/6CdyiPIfLd0?autoplay=1"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </div>
         </div>
       </section>
 
